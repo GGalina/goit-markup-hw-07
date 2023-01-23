@@ -1,0 +1,32 @@
+.benefits {
+    padding-bottom: 0;
+}
+.benefits__list {
+    display: flex;
+    gap: 30px;
+}
+.benefits__item {
+    width: calc((100% - 90px)/4);
+}
+.benefits__title {
+    @include font(null, 14px, 1.14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+.benefits__desc {
+    @include font(null, 14px, 1.71);
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color)
+}
+.benefits__wrap {
+    height: 120px;
+    @include centeredFlex;
+
+    background-color: #F5F4FA;
+    border-radius: 4px;
+
+    margin-bottom: 30px;
+}

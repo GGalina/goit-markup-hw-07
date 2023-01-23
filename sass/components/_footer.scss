@@ -1,0 +1,116 @@
+.footer {
+    font-style: normal;
+
+    background-color: var(--secondary-background-color);
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
+.address-wrap {
+    margin-right: 70px;
+}
+.address-list__address {
+    @include font(400, 14px, 1.71);
+    letter-spacing: 0.03em;
+
+    color: var(--primary-background-color);
+}
+
+.address-list__email,
+.address-list__tel {
+    @extend .address-list__address;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+.address-list__item {
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+.footer__header {
+    @include font(700, 14px, 1.14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.join-list {
+    display: flex;
+    gap: 10px;
+}
+.join-list__item {
+    width: 44px;
+    height: 44px;
+}
+.join-list__link {
+    @include centeredFlex;
+
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--transition);
+
+    width: 100%;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+.join-list__icon {
+    fill: #FFFFFF;
+}
+.join-wrap {
+    margin-right: 93px;
+}
+.subscribe__form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.subscribe__item {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: var(--accent-color);
+
+    &::placeholder {
+        @include font(400, 16px, 1.25);
+        letter-spacing: 0.03em;
+    
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+.subscribe__input {
+    @include font(400, 16px, 1.25);
+    letter-spacing: 0.03em;
+
+    width: 358px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+
+    outline: transparent;
+    transition: border var(--transition);
+}
+.subscribe__btn {
+    display: flex;
+
+    fill: #FFFFFF;
+
+    margin-top: 0;
+    gap: 10px;
+    padding: 10px 28px;
+}

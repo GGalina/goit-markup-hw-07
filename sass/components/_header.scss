@@ -1,0 +1,85 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.menu {
+    display: flex;
+    gap: 50px;
+}
+.header__container,
+.contacts {
+    @include centeredFlex;
+}
+.menu__link {
+    display: block;
+    position: relative;
+
+    @include font(500, 14px, 1.14);
+    letter-spacing: 0.02em;
+
+    color: inherit;
+    transition: color var(--transition);
+
+    padding: 32px 0;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+}
+.menu__link--current {
+    &::after {
+        content: '';
+
+        position: absolute;
+        background: #2196F3;
+        border-radius: 2px;
+
+        height: 4px;
+        width: 100%;
+        bottom: -1px;
+        left: 0;
+    }
+}
+.menu__link.menu__link--current {
+    color: var(--accent-color);
+}
+
+
+.contacts__tel,
+.contacts__email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include font(500, 14px, 1.14);
+    letter-spacing: 0.02em;
+
+    color: var(--secondary-text-color);
+    transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+.contacts__tel {
+    margin-left: 30px;
+}
+.contacts__icon {
+    fill: var(--secondary-text-color);
+    transition: fill var(--transition);
+
+    .contacts__email:hover &,
+    .contacts__email:focus &,
+    .contacts__tel:hover &,
+    .contacts__tel:focus & {
+        fill: var(--accent-color)
+    }
+}
+
